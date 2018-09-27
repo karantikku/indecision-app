@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "main": "src/index.js",
+  "main": "src/playground/es6-classes-1.js",
   "dependencies": {
     "react": "16.4.2",
     "react-dom": "16.4.2",
