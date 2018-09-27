@@ -1,6 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./styles.css";
+class IndecisionApp extends React.Component {
+  render() {
+    return (
+      <div>
+        <Header />
+        <Action />
+        <Options />
+        <AddOption />
+      </div>
+    );
+  }
+}
 class Header extends React.Component {
   render() {
     return (
@@ -22,26 +34,22 @@ class Action extends React.Component {
 }
 class Options extends React.Component {
   render() {
-    return <div>Option Component Header</div>;
-  }
-}
-class Form extends React.Component {
-  render() {
     return (
       <div>
-        <input type="text" />
-        <button>Submit</button>
+        Options Component Header
+        <Option />
       </div>
     );
   }
 }
-const jsx = (
-  <div>
-    <Header />
-    <Action />
-    <Options />
-    <Form />
-  </div>
-);
-
-ReactDOM.render(jsx, document.getElementById("root"));
+class Option extends React.Component {
+  render() {
+    return <div>Option Component Here</div>;
+  }
+}
+class AddOption extends React.Component {
+  render() {
+    return <div>AddOption Components Here</div>;
+  }
+}
+ReactDOM.render(<IndecisionApp />, document.getElementById("root"));
