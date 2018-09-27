@@ -3,12 +3,47 @@ class Person {
     this.name = name;
     this.age = age;
   }
+  getGreeting() {
+    return "Hi!";
+  }
   getDescription() {
-    return `${this.name} is ${this.age} year(s) old`;
+    return `${this.name} is ${this.age} year(s) old.`;
   }
 }
-
-const me = new Person("Karan Tikku", 24);
-const other = new Person();
-console.log(me.getDescription());
-console.log(other.getDescription());
+class Student extends Person {
+  constructor(name, age, major) {
+    super(name, age);
+    this.major = major;
+  }
+  hasMajor() {
+    return !!this.major;
+  }
+  getDescription() {
+    let description = super.getDescription();
+    if (this.hasMajor()) {
+      description = description + `Their Major is ${this.major}.`;
+    }
+    return description;
+  }
+}
+class Traveller extends Person {
+  constructor(name, age, homeLocation) {
+    super(name, age);
+    this.homeLocation = homeLocation;
+  }
+  hasHomeLocation() {
+    return !!this.homeLocation;
+  }
+  getGreeting() {
+    let greeting = super.getGreeting();
+    if (this.hasHomeLocation()) {
+      greeting = greeting + `, I'm visiting from ${this.homeLocation}.`;
+    }
+    return greeting;
+  }
+}
+const me = new Traveller("Karan Tikku", 24, "Delhi");
+const other = new Traveller();
+console.log(me);
+console.log(me.getGreeting());
+console.log(other.getGreeting());
