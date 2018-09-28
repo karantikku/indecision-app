@@ -5,7 +5,7 @@
   "keywords": [
     "react"
   ],
-  "main": "src/playground/counter-example.js",
+  "main": "src/playground/build-it-visible.js",
   "dependencies": {
     "react": "16.4.2",
     "react-dom": "16.4.2",
