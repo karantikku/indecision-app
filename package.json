@@ -5,7 +5,7 @@
   "keywords": [
     "react"
   ],
-  "main": "src/index.js",
+  "main": "src/playground/counter-example.js",
   "dependencies": {
     "react": "16.4.2",
     "react-dom": "16.4.2",
